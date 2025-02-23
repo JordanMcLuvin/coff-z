@@ -2,6 +2,8 @@
 
 This project is a **Custom Onboarding Flow Application** built with **Next.js**, **React**, and a backend API. The application allows administrators to configure editable sections for user pages and provides routing for different user roles.
 
+This is a fully dockerized application in a monorepo. Simply clone the repo, naviagte to the root folder in a terminal and run ```docker-compose up --build```.
+
 ## 📌 Features
 - **User & Admin Pages**: Dynamic page structure for users and administrators.
 - **Configurable Sections**: Admins can enable or disable sections (e.g., Address, Birthdate).
