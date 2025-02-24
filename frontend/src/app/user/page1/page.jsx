@@ -11,6 +11,10 @@ const Page = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!email || !password) {
+            alert('Please fill in all fields');
+            return;
+        }
         fetch(`${apiUrl}/user`, {
             method: 'POST',
             headers: {

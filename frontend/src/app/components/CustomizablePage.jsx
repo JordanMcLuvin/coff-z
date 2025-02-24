@@ -55,7 +55,13 @@ export default function UserFormPage(props) {
             },
             body: JSON.stringify(payload),
         })
-            .then((res) => res.json())
+            .then((res) => {
+                if (res.status === 200) {
+                    return res.json();
+                } else {
+                    throw new Error('Failed to update user');
+                }
+            })
             .then((data) => {
                 router.push(`/user/page3?email=${encodeURIComponent(email)}`);
             })
