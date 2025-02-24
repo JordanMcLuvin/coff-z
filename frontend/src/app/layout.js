@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
                   Workflow
               </button>
           </Link>
-          <Link href="/tables">
+          <Link href="/data">
               <button className="w-32 px-4 py-2 bg-green-500 rounded-lg hover:bg-green-600">
-                  Table
+                  Data
               </button>
           </Link>
           <Link href="/admin">

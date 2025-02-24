@@ -1,16 +1,18 @@
 const mongoose = require('mongoose');
 
 const addressSchema = new mongoose.Schema({
-  street: { type: String, required: true },
-  city: { type: String, required: true },
-  state: { type: String, required: true },
-  zip: { type: String, required: true },
+  street: { type: String },
+  city: { type: String },
+  state: { type: String },
+  zip: { type: String },
 });
 
 const userSchema = new mongoose.Schema({
-  aboutMe: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  aboutMe: { type: String },
   address: addressSchema,
-  birthdate: { type: Date, required: true },
+  birthdate: { type: Date },
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
