@@ -1,3 +1,6 @@
+options:
+  logging: NONE
+
 steps:
   # Build the frontend Docker image
   - name: 'gcr.io/cloud-builders/docker'
